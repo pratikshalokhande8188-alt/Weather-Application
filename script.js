@@ -1,4 +1,4 @@
-const API_KEY = '2833164ab887ad6aae4c494f660d1e5d'; // Replace with your actual free API key
+const API_KEY = '2833164ab887ad6aae4c494f660d1e5d'; 
 const BASE_URL = 'https://api.openweathermap.org/data/2.5/forecast';
 
 const cityInput = document.getElementById('city-input');
@@ -54,7 +54,6 @@ function displayAllWeatherData(data) {
     errorMsg.classList.add('hidden');
     weatherInfo.classList.remove('hidden');
 
-    // 1. Process and Populate Current Day Row Weather Metric States
     const current = data.list[0];
     cityName.textContent = `${data.city.name}, ${data.city.country}`;
     weatherCondition.textContent = current.weather[0].description;
@@ -63,16 +62,13 @@ function displayAllWeatherData(data) {
     humidity.textContent = current.main.humidity;
     windSpeed.textContent = current.wind.speed;
 
-    // Premium Fix: Fetch higher resolution @4x graphics sets for crisp scaling
     const iconCode = current.weather[0].icon;
     weatherIcon.src = `https://openweathermap.org/img/wn/${iconCode}@4x.png`;
     
     updateBackground(current.weather[0].main);
 
-    // 2. Loop and Generate 5-Day Sub-Forecast Elements Rows
     forecastContainer.innerHTML = ''; 
     
-    // Filters timestamps to cleanly slice unified daily points (noon snapshots)
     const dailyRecords = data.list.filter(item => item.dt_txt.includes("12:00:00"));
     const displays = dailyRecords.length > 0 ? dailyRecords : data.list.filter((_, i) => i % 8 === 0);
 
