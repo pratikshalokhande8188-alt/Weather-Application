@@ -1,4 +1,3 @@
-/* Custom Variable Token Configurations */
 :root {
     --card-bg: rgba(255, 255, 255, 0.85);
     --card-blur: blur(16px);
@@ -24,14 +23,12 @@ body {
     transition: background 1s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Beautiful Premium Vibrant Background Gradients */
 .default-bg { background: linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%); }
 .clear-bg { background: linear-gradient(135deg, #00c6ff 0%, #0072ff 100%); }
 .clouds-bg { background: linear-gradient(135deg, #617ca3 0%, #abc4ff 100%); }
 .rain-bg { background: linear-gradient(135deg, #2b3a4a 0%, #4a6984 100%); }
 .snow-bg { background: linear-gradient(135deg, #e2ebf0 0%, #cfd9df 100%); }
 
-/* High-Fidelity Glassmorphism App Card Container */
 .weather-container {
     background: var(--card-bg);
     backdrop-filter: var(--card-blur);
@@ -53,8 +50,6 @@ h2 {
     font-size: 24px;
     letter-spacing: -0.5px;
 }
-
-/* Polished Search Box */
 .search-box {
     display: flex;
     gap: 10px;
@@ -113,7 +108,6 @@ h2 {
     box-shadow: 0 6px 16px rgba(59, 130, 246, 0.3);
 }
 
-/* Modern Minimalist Loading Spinner */
 .spinner {
     width: 40px;
     height: 40px;
@@ -129,7 +123,6 @@ h2 {
     100% { transform: rotate(360deg); }
 }
 
-/* Weather Information Blocks */
 .weather-info {
     animation: fadeInUp 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
@@ -141,7 +134,7 @@ h2 {
     letter-spacing: -0.5px;
 }
 
-/* High Quality Centered Icon Display Wrap */
+
 .weather-status {
     display: flex;
     flex-direction: column;
@@ -174,7 +167,6 @@ h2 {
     font-weight: 600;
 }
 
-/* Clean Info Row Items List Fix */
 .weather-details {
     background: rgba(255, 255, 255, 0.5);
     border: 1px solid rgba(0, 0, 0, 0.03);
@@ -205,7 +197,6 @@ h2 {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
 }
 
-/* Metric Theme Color Accents */
 .temp-color { color: #ff6b6b; }
 .humidity-color { color: #4dadf7; }
 .wind-color { color: #6c757d; }
@@ -225,7 +216,6 @@ h2 {
     margin-top: 1px;
 }
 
-/* Premium 5-Day Forecast Display Grid */
 .forecast-section {
     margin-top: 25px;
     border-top: 1px solid rgba(0, 0, 0, 0.06);
@@ -283,7 +273,6 @@ h2 {
     margin-top: 4px;
 }
 
-/* Beautiful Custom Error Alert Elements */
 .error-msg {
     color: #ef4444;
     background-color: #fef2f2;
@@ -303,7 +292,6 @@ h2 {
     to { opacity: 1; transform: translateY(0); }
 }
 
-/* Clean Responsive Viewport Management */
 @media (max-width: 480px) {
     .weather-container { padding: 25px 20px; }
     .forecast-grid { display: flex; gap: 10px; overflow-x: auto; padding-bottom: 8px; }
