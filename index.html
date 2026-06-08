@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="default-bg">
+
+    <div class="weather-container">
+        <h2>Weather Dashboard</h2>
+        
+        <div class="search-box">
+            <div class="input-wrapper">
+                <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                <input type="text" id="city-input" placeholder="Search for a city..." autocomplete="off">
+            </div>
+            <button id="search-btn">Search</button>
+        </div>
+
+        <div id="loading-spinner" class="spinner hidden"></div>
+        
+        <p id="error-message" class="error-msg hidden"></p>
+
+        <div id="weather-info" class="weather-info hidden">
+            <h3 id="city-name">City Name</h3>
+            
+            <div class="weather-status">
+                <div class="icon-container">
+                    <img id="weather-icon" src="" alt="Weather Condition">
+                </div>
+                <span id="weather-condition">Condition</span>
+            </div>
+            
+            <div class="weather-details">
+                <div class="detail-item">
+                    <i class="fa-solid fa-temperature-half metric-icon temp-color"></i>
+                    <div>
+                        <span class="metric-label">Temperature</span>
+                        <span class="metric-value"><span id="temperature">--</span>°C</span>
+                    </div>
+                </div>
+                <div class="detail-item">
+                    <i class="fa-solid fa-droplet metric-icon humidity-color"></i>
+                    <div>
+                        <span class="metric-label">Humidity</span>
+                        <span class="metric-value"><span id="humidity">--</span>%</span>
+                    </div>
+                </div>
+                <div class="detail-item">
+                    <i class="fa-solid fa-wind metric-icon wind-color"></i>
+                    <div>
+                        <span class="metric-label">Wind Speed</span>
+                        <span class="metric-value"><span id="wind-speed">--</span> m/s</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="forecast-section">
+                <h4>5-Day Forecast</h4>
+                <div id="forecast-container" class="forecast-grid"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
